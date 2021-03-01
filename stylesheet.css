@@ -1,0 +1,145 @@
+html, body, .grid-container { height: 100%; background: black; }
+
+.grid-container * {
+  border-radius: 10px;
+  position: relative;
+  margin: 15px;
+  background-color: #000B53;
+  color: white;
+}
+
+.grid-container *:after {
+  content:attr();
+  position: relative;
+  top: 15px;
+  left: 15px;
+}
+
+.Header {
+  background-color: black;
+  max-height: 100px;
+}
+
+.legend {
+        font-family: 'Raleway', sans-serif;
+        fill: #333333
+
+}
+      
+.tooltip {
+        fill: #333333;
+}
+
+    .gauge .domain {
+            stroke-width: 2px;
+            stroke: #fff;
+        }
+
+        .gauge .tick line {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+        
+        .gauge line {
+            stroke: #fff;
+        }
+
+        .gauge .arc, .gauge .cursor {
+            opacity: 0;
+        }
+
+        .gauge .major {
+            fill: #fff;
+            font-size: 20px;
+            font-family: 'Play', verdana, sans-serif;
+            font-weight: normal;
+        }
+        
+        .gauge .indicator {
+            stroke: #EE3311;
+            fill: #000;
+            stroke-width: 4px;
+        }
+
+        /* css formats for the segment display */
+        .segdisplay .on {
+            fill: #00FFFF;
+
+        }
+
+        .segdisplay .off {
+            fill: #00FFFF;
+            opacity: 0.15;
+        }
+
+@media screen and (max-width:1920px){
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Box-1 Box-1 Box-2 Box-2"
+    "Box-3 Box-4 Box-2 Box-2";
+}
+
+.Header { grid-area: Header; }
+
+.Box-1 { grid-area: Box-1; }
+
+.Box-2 { grid-area: Box-2; }
+
+.Box-3 { grid-area: Box-3; }
+
+.Box-4 { grid-area: Box-4; }
+  
+}
+
+@media screen and (max-width:768px){
+  .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Box-1 Box-1 Box-2 Box-2"
+    "Box-3 Box-3 Box-3 Box-3"
+    "Box-4 Box-4 Box-4 Box-4";
+}
+
+.Header { grid-area: Header; }
+
+.Box-3 { grid-area: Box-3; }
+
+.Box-4 { grid-area: Box-4; }
+
+.Box-2 { grid-area: Box-2; }
+
+.Box-1 { grid-area: Box-1; }
+
+  }
+
+@media screen and (max-width:375px){
+ .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "Header Header Header Header"
+    "Box-1 Box-1 Box-1 Box-1"
+    "Box-2 Box-2 Box-2 Box-2"
+    "Box-3 Box-3 Box-3 Box-3"
+    "Box-4 Box-4 Box-4 Box-4";
+}
+
+.Header { grid-area: Header; }
+
+.Box-2 { grid-area: Box-2; }
+
+.Box-3 { grid-area: Box-3; }
+
+.Box-1 { grid-area: Box-1; }
+
+.Box-4 { grid-area: Box-4; }
+
+  }
